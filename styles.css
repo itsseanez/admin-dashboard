@@ -1,6 +1,8 @@
 :root {
     --blue-color: RGB(69, 144, 207);
     --grey-color: RGB(227, 232, 239);
+    --header-padding: 5%;
+    --reg-padding: 2%;
 }
 
 * {
@@ -21,6 +23,17 @@ body {
     text-align: left;
 }
 
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #content {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
@@ -39,12 +52,44 @@ body {
     grid-column: 2 / 3;
     background-color: white;
     box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    gap: 20%;
+}
+
+#header>* {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: var(--header-padding);
+    padding-right: var(--header-padding);
+}
+
+.header-button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 20px;
+    text-align: center;
 }
 
 img {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+}
+
+input {
+    height: 2rem;
+    width: 40vw;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 1rem;
+    background-color: var(--grey-color);
+}
+
+.profile {
+    gap: 15px;
 }
 
 #sidebar {
